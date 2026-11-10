@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Bhai Dooj Surprise 🌻</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #fffaf0, #fff0c7);
+      color: #514333;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: auto;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 24px;
+      padding: 35px 25px;
+      box-shadow: 0 10px 35px rgba(120, 90, 30, 0.10);
+      border: 1px solid #f6e7c5;
+    }
+
+    h1 {
+      font-size: 29px;
+      color: #a87922;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 21px;
+      color: #a87922;
+    }
+
+    .flower {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .subtitle {
+      color: #9b8060;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    input {
+      width: 100%;
+      max-width: 280px;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid #e6cf9d;
+      font-size: 17px;
+      text-align: center;
+      outline: none;
+      background: #fffdf8;
+    }
+
+    input:focus {
+      border-color: #c59a40;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto 0;
+      padding: 13px 30px;
+      background: #e8b954;
+      border: none;
+      border-radius: 30px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #4e3b1d;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #dba63c;
+      transform: translateY(-2px);
+    }
+
+    .error {
+      color: #d35b5b;
+      font-size: 14px;
+      min-height: 20px;
+    }
+
+    #mainPage {
+      display: none;
+    }
+
+    .message {
+      text-align: left;
+      font-size: 16px;
+      line-height: 1.9;
+      background: #fffaf1;
+      padding: 23px;
+      border-radius: 16px;
+      margin-top: 25px;
+      white-space: pre-line;
+    }
+
+    .photo-section {
+      margin-top: 38px;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .photo-card {
+      background: white;
+      padding: 9px 9px 14px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .photo-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 6px;
+      background: #f7ecd5;
+    }
+
+    .photo-card p {
+      margin: 10px 0 0;
+      font-size: 13px;
+      color: #8d7558;
+    }
+
+    .ending {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #a87922;
+    }
+
+    .footer {
+      font-size: 12px;
+      color: #a99577;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 420px) {
+      .card {
+        padding: 25px 17px;
+      }
+
+      h1 {
+        font-size: 25px;
+      }
+
+      .message {
+        font-size: 15px;
+        padding: 17px;
+      }
+
+      .photo-grid {
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PASSWORD SCREEN -->
+  <div class="container" id="passwordPage">
+    <div class="card">
+      <div class="flower">🌻</div>
+
+      <h1>A Little Surprise!</h1>
+
+      <p class="subtitle">
+        Something small, just for you.
+        <br>
+        Enter the secret password to continue.
+      </p>
+
+      <input
+        type="text"
+        id="passwordInput"
+        placeholder="Enter password"
+        autocomplete="off"
+      >
+
+      <button onclick="checkPassword()">
+        Unlock Surprise 💌
+      </button>
+
+      <p class="error" id="errorMessage"></p>
+    </div>
+  </div>
+
+
+  <!-- MAIN WEBSITE -->
+  <div class="container" id="mainPage">
+    <div class="card">
+
+      <div class="flower">🌻</div>
+
+      <h1>Happy Bhai Dooj! 💗</h1>
+
+      <p class="subtitle">
+        A little something from your brother.
+      </p>
+
+      <!-- YOUR PERSONAL MESSAGE -->
+      <div class="message">Hahahaha I know u guys didn’t expected this thing 😄 but I couldn’t think of what to gift, so came up with this idea, I don’t know if u guys will like it or not, but that’s all came in my mind for now 😭
+
+Happy Bhai Dooj though 💗 Thanks for existing. It always feels so good whenever I’m with both of you. U guys are much more than the brother-sister, more like friends to me 😄 I hope our bond continue to grow more stronger (like me) and beautiful (like you guys)</div>
+
+
+      <!-- PHOTO SECTION -->
+      <div class="photo-section">
+
+        <h2>Some Random Memories 📸</h2>
+
+        <p class="subtitle">
+          Just a few pictures worth keeping.
+        </p>
+
+        <div class="photo-grid">
+
+          <!-- SHRUTI PHOTO 1 -->
+          <div class="photo-card">
+            <img src="shruti1.jpeg" alt="Shruti Photo 1">
+            <p>Shruti 💜</p>
+          </div>
+
+          <!-- SHRUTI PHOTO 2 -->
+          <div class="photo-card">
+            <img src="shruti2.jpeg" alt="Shruti Photo 2">
+            <p>Shruti 💜</p>
+          </div>
+
+          <!-- SMRATI PHOTO 1 -->
+          <div class="photo-card">
+            <img src="smrati1.jpeg" alt="Smrati Photo 1">
+            <p>Smrati 🌷</p>
+          </div>
+
+          <!-- SMRATI PHOTO 2 -->
+          <div class="photo-card">
+            <img src="smrati2.jpeg" alt="Smrati Photo 2">
+            <p>Smrati 🌷</p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- SIMPLE ENDING -->
+      <div class="ending">
+        Bas itna hi tha 😭❤️
+      </div>
+
+      <p class="footer">
+        Made with a little effort and a lot of confusion 🌻
+      </p>
+
+    </div>
+  </div>
+
+
+  <script>
+    function checkPassword() {
+      const password = document
+        .getElementById("passwordInput")
+        .value
+        .trim();
+
+      const error = document.getElementById("errorMessage");
+
+      if (password === "21/12" || password === "10/06") {
+        document.getElementById("passwordPage").style.display = "none";
+        document.getElementById("mainPage").style.display = "block";
+        window.scrollTo(0, 0);
+      } else {
+        error.textContent = "Oops! Wrong password. Try again 🌻";
+      }
+    }
+
+    document.getElementById("passwordInput")
+      .addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+          checkPassword();
+        }
+      });
+  </script>
+
+</body>
+</html>
